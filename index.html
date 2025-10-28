@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Consumo de Água</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Meu Registro de Consumo</h1>
+    <p class="subtitle">Adicione a leitura atual do hidrômetro (em m³).</p>
+
+    <form id="meuFormulario">
+      <div class="form-group">
+        <label for="leitura">Leitura atual (m³):</label>
+        <input type="number" id="leitura" name="leitura" required step="0.01" min="0">
+      </div>
+      <button type="submit" id="btnEnviar" class="btn primary-btn">Salvar Leitura</button>
+    </form>
+    
+    <hr>
+
+    <h2>Histórico de Consumo</h2>
+    <p class="subtitle">Clique para carregar o histórico da planilha.</p>
+    
+    <button id="btnBuscar" class="btn secondary-btn">Carregar Histórico</button>
+    
+    <div id="dados-container">
+      <p>Os dados aparecerão aqui...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
