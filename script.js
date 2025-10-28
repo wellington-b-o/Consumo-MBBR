@@ -3,7 +3,7 @@
 // =======================================================
 
 // Cole aqui a URL publicada do seu Apps Script:
-const URL_DO_SCRIPT = "https://script.google.com/macros/s/AKfycbwLctK4OP5a6SgFnEFtz4EkxgrNEklD9R21P-KPLGRV0vxM5UIi8H--HPjUFZzxA2Y/exec";
+const URL_DO_SCRIPT = "https://script.google.com/macros/s/AKfycbz0kztSeGuKXhTtS9DL_tuObee_Gm7xryh1bnhQ78770q5JTQW8ptAeUCwJnEAvHvqJ/exec";
 
 // --- Seleção dos elementos HTML ---
 const form = document.getElementById("meuFormulario");
@@ -104,3 +104,4 @@ function exibirDadosConsumo(dados) {
     dadosContainer.appendChild(div);
   });
 }
+
