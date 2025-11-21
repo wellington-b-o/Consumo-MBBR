@@ -1,36 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro de Consumo de Água</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consumo Sala de Máquinas</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Meu Registro de Consumo</h1>
-    <p class="subtitle">Adicione a leitura atual do hidrômetro (em m³).</p>
 
-    <form id="meuFormulario">
-      <div class="form-group">
-        <label for="leitura">Leitura atual (m³):</label>
-        <input type="number" id="leitura" name="leitura" required step="0.01" min="0">
-      </div>
-      <button type="submit" id="btnEnviar" class="btn primary-btn">Salvar Leitura</button>
-    </form>
-    
-    <hr>
+<div id="login-container" class="card">
+    <h2>Digite o PIN</h2>
+    <input type="password" id="pin" placeholder="PIN" maxlength="4">
+    <button onclick="validarPIN()">Entrar</button>
+    <p id="erro-pin" class="erro"></p>
+</div>
 
-    <h2>Histórico de Consumo</h2>
-    <p class="subtitle">Clique para carregar o histórico da planilha.</p>
-    
-    <button id="btnBuscar" class="btn secondary-btn">Carregar Histórico</button>
-    
-    <div id="dados-container">
-      <p>Os dados aparecerão aqui...</p>
-    </div>
-  </div>
+<div id="painel-container" class="card escondido">
+    <h2>Consumo Sala de Máquinas</h2>
 
-  <script src="script.js"></script>
+    <p><strong>Usuário Logado:</strong> <span id="usuarioLogado"></span></p>
+
+    <label for="leitura">Leitura Atual (m³):</label>
+    <input type="number" id="leitura" placeholder="Digite a leitura">
+
+    <button onclick="enviarLeitura()">Enviar Leitura</button>
+
+    <p id="mensagem" class="sucesso"></p>
+
+    <button class="sair" onclick="logout()">Sair</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
